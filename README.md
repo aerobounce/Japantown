@@ -8,7 +8,7 @@
 # Install
 
 ```
-brew install aerobounce/Japantown/japantown
+brew tap aerobounce/Japantown && brew install japantown
 ```
 
 # Differences from SFMono Fonts
