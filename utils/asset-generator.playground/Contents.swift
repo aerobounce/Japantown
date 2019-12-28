@@ -93,26 +93,14 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
     print(destination.deletingLastPathComponent().path)
 }
 
-let label = UILabel(frame: CGRect(x: 0, y: 0, width: 800, height: 300))
+let label = UILabel(frame: CGRect(x: 0, y: 0, width: 800, height: 550))
 label.backgroundColor = .white
 label.textAlignment = .center
 label.numberOfLines = 0
 label.font = UIFont(name: "Japantown-Regular", size: 24)
-label
-    .text = "Japantown-Regular 24px\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+label.text =
+    "Japantown-Regular 24px\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nあのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎらひかる草の波。またそのなかでいっしょになったたくさんのひとたち、ファゼーロとロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・テストゥパーゴなど、いまこの暗い巨きな石の建物のなかで考えていると、みんなむかし風のなつかしい青い幻燈のように思われます。"
 let destination = FileManager.default
     .urls(for: .documentDirectory, in: .userDomainMask)[0]
     .appendingPathComponent("lorem.png", isDirectory: false)
 try! label.pngData.write(to: destination)
-
-let label2 = UILabel(frame: CGRect(x: 0, y: 0, width: 800, height: 300))
-label2.backgroundColor = .white
-label2.textAlignment = .center
-label2.numberOfLines = 0
-label2.font = UIFont(name: "Japantown-Regular", size: 24)
-label2
-    .text = "Japantown-Regular 24px\n\nあのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎらひかる草の波。またそのなかでいっしょになったたくさんのひとたち、ファゼーロとロザーロ、羊飼のミーロや、顔の赤いこどもたち、地主のテーモ、山猫博士のボーガント・テストゥパーゴなど、いまこの暗い巨きな石の建物のなかで考えていると、みんなむかし風のなつかしい青い幻燈のように思われます。"
-let destination2 = FileManager.default
-    .urls(for: .documentDirectory, in: .userDomainMask)[0]
-    .appendingPathComponent("jp.png", isDirectory: false)
-try! label2.pngData.write(to: destination2)
