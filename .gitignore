@@ -1,0 +1,5 @@
+*.otf
+*.ttf
+.DS_Store
+xcuserdata
+*.xctimeline
