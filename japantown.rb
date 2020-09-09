@@ -1,9 +1,9 @@
 class Japantown < Formula
   desc "Tighten SF Mono + Japanese Font"
   homepage "https://github.com/aerobounce/Japantown"
-  url "https://github.com/aerobounce/Homebrew-Japantown/archive/2019-12-27.zip"
-  sha256 "37b0938d0f005ed5c85642d4792c3fcab7ed3dca33dab74736c834f53da08d99"
-  version "2019-12-27"
+  url "https://github.com/aerobounce/Homebrew-Japantown/archive/2020-08-13.zip"
+  sha256 "72bd4e4b58fa259b5f1c6eda8faf7b376dd66d23388d16931e81f858ed6ae8dc"
+  version "2020-08-13"
   head "https://github.com/aerobounce/Japantown.git"
 
   depends_on "fontforge"
@@ -24,9 +24,9 @@ class Japantown < Formula
         "mplus-1m-light.otf",
         "mplus-1m-regular.otf",
         "mplus-1m-medium.otf",
-        "mplus-1m-bold.otf"
+        "mplus-1m-bold.otf",
       ]
-      .each do | mplus |
+        .each do |mplus|
         buildpath.install mplus
       end
     }
@@ -42,14 +42,14 @@ class Japantown < Formula
         "SF-Mono-Medium.otf",
         "SF-Mono-MediumItalic.otf",
         "SF-Mono-Semibold.otf",
-        "SF-Mono-SemiboldItalic.otf"
+        "SF-Mono-SemiboldItalic.otf",
       ]
-      .each do | sfmono |
+        .each do |sfmono|
         buildpath.install "Library/Fonts/#{sfmono}"
       end
     end
 
-    system buildpath / "install.sh", "-brew"
+    system (buildpath / "install.sh"), "-brew"
     prefix.install Dir["build/*.otf"]
     system "open", prefix
   end
